@@ -21,7 +21,7 @@ urlpatterns = [
     path('',views.index),
     # path('userform/',views.user1),
     path('form1/',views.asd),
-    # path('form1/form/',views.user2),
+    path('form1/form',views.user2),
     path('login/',views.login),
     path('login/userhome/',views.login_page),
     path('camera/',views.camera)
