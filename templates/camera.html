@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Camera</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+</head>
+<body class="">
+   <video id="video" width="500px" height="600px"></video>
+    <canvas id="image"  width="600px" height="500px"></canvas>
+    <button onclick="click1()">click</button>
+<script>
+   var  video = document.getElementById("video");
+   var canvas =  document.getElementById("image");
+   var context = canvas.getContext('2d');
+   url = window.webkitURL || window.URL;
+   navigator.getUserMedia = navigator.getUserMedia|| navigator.webkitGetUserMedia || navigator.msGetUserMedia;
+    if(navigator.getUserMedia)
+    {
+        navigator.getUserMedia({video:true},streamWebCam,errorthrow);
+    }
+    function streamWebCam(stream)
+    {
+        // video.src = url.createObjectURL(stream);
+        video.srcObject = stream;
+        video.play();
+    }
+    function errorthrow(e)
+    {
+        console.log("error");
+    }
+     function click1()
+     {
+         context.drawImage(video,0,0);
+        const img = canvas.toDataURL();
+        window.location.href=img;
+         
+     } 
+    </script>
+</body>

@@ -1,0 +1,122 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Avinash</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/style1.css' %}">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src='script/script1.js'></script> 
+</head>
+<body class="">
+  <!-------------*Navigation-bar*--------------->
+ <nav class="navbar navbar-expand-md navbar-dark sticky-top b-image" style="background-color: rgba(0,0,0,0.2);">
+    <a class="navbar-brand" href="index.html"><h2 class="nav-head" style="color:white;">𝓐𝓿𝓲𝓷𝓪𝓼𝓱</h2></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse text-center" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active text-white select-a" href="index.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item mr-3">
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white select" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
+          Course
+        </a>
+        <div class="dropdown-menu  text-center" style="background-color:rgba(0,0,0,0.5);" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item text-white select-l" href="html.php">Html</a>
+          <a class="dropdown-item text-white select-l" href="#">Css</a>
+          <a class="dropdown-item text-white select-l" href="#">Javascript</a>
+          <a class="dropdown-item text-white select-l" href="#">Php</a>
+        </div>
+      </li>
+      </li>
+      <li class="nav-item mr-1">
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white select" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
+          About us
+        </a>
+        <div class="dropdown-menu text-center" style="background-color:rgba(0,0,0,0.5);" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item text-white select-l" href="">Team</a>
+          <a class="dropdown-item text-white select-l" href="#">Course</a>
+        </div>
+      <li class="nav-item mr-3">
+        <a class="nav-link text-white select" href="#">Contact</a>
+      </li>
+    </ul>
+    <button class="btn-primary btn-primary1 my-2 my-lg-0 mr-0 px-3"><a class="" href="logout.php">logout</a></button>
+  </div>
+ </nav>
+<!------------------------------------------------->
+<div class="container-fluid bg-image text-white text-center">
+    <h4 class="text-center text-white" style="padding-top:170px;">Hi! {{name}}</h4>
+    <img src="{% static 'image/laptop.png' %}" width="120px" height="80px" class="px-3 text-center">
+    <h2 class="text-center  py-2">Welcome to my website</h2>
+   <h1 class="text-center ">IT`S NICE TO MEET YOU</h1> 
+   </div>
+   <!------Course---------->
+   <div class="container py-4">
+     <h2 class="text-center py-4">Course</h2>
+   <div class="card-group">
+    <div class="card px-3">
+      <img src="{% static 'image/html.png' %}" class="card-img-top"  width="150px" height="250px">
+      <div class="card-body">
+        <h5 class="card-title">Html</h5>
+        <p class="card-text">Hypertext Markup Language revision 5 (HTML5) is markup language 
+                for the structure and presentation of World Wide Web contents.</p>
+        <p class="card-text"><a href="myapp/login" class="btn btn-primary">join<a></p>
+  
+      </div>
+    </div>
+    <div class="card px-3">
+      <img src="{% static 'image/css.png' %}" class="card-img-top" width="150px" height="250px">
+      <div class="card-body">
+        <h5 class="card-title">Css</h5>
+        <p class="card-text">CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once.</p>
+        <p class="card-text"><a href="myapp/login" class="btn btn-primary">join<a></p>
+      </div>
+    </div>
+    <div class="card px-3">
+      <img src="{% static 'image/js.png' %}" class="card-img-top"  width="150px" height="250px">
+      <div class="card-body">
+        <h5 class="card-title">Javascript</h5>
+        <p class="card-text">JavaScript is most commonly used as a client side scripting language. This means that JavaScript code is written into an HTML page. When a user requests an HTML page with JavaScript in it, the script is sent to the browser and it's up to the browser to do something with it.</p>
+        <p class="card-text"><a href="myapp/login" class="btn btn-primary">join<a></p>
+      </div>
+    </div>
+  </div>
+  </div>
+   </div>
+  
+   <!--------OUR TEAM-------------->
+  <div class="container"> 
+    <h2 class="text-center mt-1">Our Team</h2>
+    <div class="row mt-5">
+    <div class="caption col-lg-4 col-md-4 mr-1 text-center">
+    <img src="{% static 'image/my.jpg' %}" class="img-responsive rounded-circle" width="200px" height="200px">
+  <h4 class="">Avinash mourya</h4>
+  <a href="#" class="btn btn-primary mr-2">contact</a><a href="3" class=" btn btn-secondary">send email</a>
+  
+  </div>
+  <div class="caption col-lg-4 col-md-4 mr-1 text-center">
+    <img src="{% static 'image/my.jpg' %}"  class="img-responsive rounded-circle" width="200px" height="200px">
+  <h4 class="">Avinash mourya</h4>
+  <a href="#" class="btn btn-primary mr-2">contact</a><a href="3" class=" btn btn-secondary">send email</a>
+  </div>
+  <div class="caption col-lg-3 col-md-3 text-center">
+    <img src="{% static 'image/my.jpg' %}"  class="img-responsive rounded-circle" width="200px" height="200px">
+  <h4 class="">Avinash mourya</h4>
+  <a href="#" class="btn btn-primary mr-2">contact</a><a href="3" class=" btn btn-secondary">send email</a>
+  </div>
+  </div>
+   </div>
+   </div>
+ </body>
+ </html>

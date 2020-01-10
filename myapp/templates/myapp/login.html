@@ -1,0 +1,56 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'myapp/css/style.css' %}">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="{% static 'myapp/script/script.js' %}"></script> 
+</head>
+<body class="">
+<!-----login Form------>
+<h2 class="form-head">Login Your Account</h2>
+<form action="userhome/" method="post">
+        {% csrf_token %}
+    <div class="form-row mt-4">
+        <div class="col-sm">
+        <div class="w-100"></div>
+    </div>
+     <div class="col-sm">
+        <input type="email" class="form-control" placeholder="Email@example.com" name="email" title="please enter your Email" required="">
+     </div>
+     <div class="col-sm">
+        <div class="w-100"></div>
+    </div>
+</div>
+    <div class="form-row mt-4">
+          <div class="col-sm">
+        <div class="w-100"></div>
+    </div>
+     <div class="col-sm">
+        <input type="password" class="form-control" placeholder="password" name="password" title="please enter your password" required="">
+     </div>
+     <div class="col-sm">
+        <div class="w-100"></div>
+    </div>
+     </div>
+    </div>
+         <div class="form-row"> 
+                <div class="col-5">
+                <div class="w-100"></div> 
+                   </div>     
+                <div class="col-sm-4">
+                        <input class="btn-submit" type="submit"  value="login" name="submit" >
+               </div>
+   </div>
+</form>  <br>
+<h5 class="h-m text-white">you have no account?<a href="../form1/">sign up</a></h5>
+</div>    
+</body>
+</html>

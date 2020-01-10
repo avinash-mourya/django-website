@@ -1,0 +1,68 @@
+
+{% extends "base.html" %}
+{% block title %}Avinash{% endblock %}
+{%  block body %} 
+{% load staticfiles %}
+<div class="container-fluid bg-image text-white text-center">
+  <img src="{% static 'image/laptop.png' %}" width="120px" height="80px" class="px-3 m-text text-center">
+ <h2 class="text-center text-center py-2">Welcome to my website</h2>
+ <h1 class="text-center text-center">IT`S NICE TO MEET YOU</h1> 
+ </div>
+ <!------Course---------->
+ <div class="container py-4">
+   <h2 class="text-center py-4">Course</h2>
+ <div class="card-group">
+  <div class="card px-3">
+    <img src="{% static 'image/html.png' %}" class="card-img-top"  width="150px" height="250px">
+    <div class="card-body">
+      <h5 class="card-title">Html</h5>
+      <p class="card-text">Hypertext Markup Language revision 5 (HTML5) is markup language 
+              for the structure and presentation of World Wide Web contents.</p>
+      <p class="card-text"><a href="myapp/login" class="btn btn-primary">join<a></p>
+
+    </div>
+  </div>
+  <div class="card px-3">
+    <img src="{% static 'image/css.png' %}" class="card-img-top" width="150px" height="250px">
+    <div class="card-body">
+      <h5 class="card-title">Css</h5>
+      <p class="card-text">CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once.</p>
+      <p class="card-text"><a href="myapp/login" class="btn btn-primary">join<a></p>
+    </div>
+  </div>
+  <div class="card px-3">
+    <img src="{% static 'image/js.png' %}" class="card-img-top"  width="150px" height="250px">
+    <div class="card-body">
+      <h5 class="card-title">Javascript</h5>
+      <p class="card-text">JavaScript is most commonly used as a client side scripting language. This means that JavaScript code is written into an HTML page. When a user requests an HTML page with JavaScript in it, the script is sent to the browser and it's up to the browser to do something with it.</p>
+      <p class="card-text"><a href="myapp/login" class="btn btn-primary">join<a></p>
+    </div>
+  </div>
+</div>
+</div>
+ </div>
+
+ <!--------OUR TEAM-------------->
+<div class="container"> 
+  <h2 class="text-center mt-1">Our Team</h2>
+  <div class="row mt-5">
+  <div class="caption col-lg-4 col-md-4 mr-1 text-center">
+  <img src="{% static 'image/my.jpg' %}" class="img-responsive rounded-circle" width="200px" height="200px">
+<h4 class="">Avinash mourya</h4>
+<a href="#" class="btn btn-primary mr-2">contact</a><a href="3" class=" btn btn-secondary">send email</a>
+
+</div>
+<div class="caption col-lg-4 col-md-4 mr-1 text-center">
+  <img src="{% static 'image/my.jpg' %}"  class="img-responsive rounded-circle" width="200px" height="200px">
+<h4 class="">Avinash mourya</h4>
+<a href="#" class="btn btn-primary mr-2">contact</a><a href="3" class=" btn btn-secondary">send email</a>
+</div>
+<div class="caption col-lg-3 col-md-3 text-center">
+  <img src="{% static 'image/my.jpg' %}"  class="img-responsive rounded-circle" width="200px" height="200px">
+<h4 class="">Avinash mourya</h4>
+<a href="#" class="btn btn-primary mr-2">contact</a><a href="3" class=" btn btn-secondary">send email</a>
+</div>
+</div>
+ </div>
+ </div>
+ {% endblock %}

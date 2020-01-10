@@ -1,0 +1,65 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>registration</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'myapp/css/style.css' %}">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="{% static 'myapp/script/script.js' %}"></script> 
+</head>
+<body class="">
+<!-----Form------>
+<h2 class="form-head">Create New Account</h2>
+<div class="container">
+    <form action ="form/" method="POST">
+      {% csrf_token %}
+    <div class="form-row mt-4">
+      <div class="col-sm">
+        <input type="text" class="form-control" placeholder="Your First Name" name="firstname" title="please enter Your First Name" required="">
+     </div>
+     <div class="col-sm">
+        <input type="phone" class="form-control" placeholder="Your Phone Number" minlength="10" maxlength="10" name="phone" title="please enter your Phone Number" required="">
+     </div>
+    </div>
+    <div class="form-row">
+         <div class="col-sm">
+        <input type="text" class="form-control" placeholder="Your Last Name" name="lastname" title="please enter your Last Name" required="">
+     </div>
+     <div class="col-sm">
+        <input type="email" class="form-control" placeholder="Email@example.com" name="email" title="please enter your Email" required="">
+     </div>
+    </div>
+    <div class="form-row">
+      <div class="col-sm">
+        <input type="text" class="form-control" placeholder="Your Address" name="address" title="please enter your Address" required="">
+     </div>
+     <div class="col-sm">
+        <input type="password" class="form-control" placeholder="password" minlength="8" name="password" title="Create our password" required="">
+     </div>
+     </div>
+    </div>
+         <div class="form-row"> 
+                <div class="col-3">
+                <div class="w-100"></div> 
+                   </div>     
+                <div class="col-sm-4">
+                        <input class="btn-submit" type="submit"  value="submit" name="submit" >
+                   </div>     
+               <div class="col-sm-4">
+                       <input class="btn-reset" type="reset"  value="reset" name="reset" >
+                      </div>
+             <div class="col-sm-0">
+                 <div class="w-100"></div>
+                </div>
+   </div>
+</form>  <br>
+<h5 class="h-m text-white">you have already account?<a class="h-m" href="../login/">log in</a></h5>
+</div>    
+</body>
+</html>
